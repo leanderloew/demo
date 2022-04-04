@@ -1,0 +1,13 @@
+SQLAlchemy
+sqlalchemy-utils
+boto3
+tqdm
+uvicorn
+fastapi
+alembic
+mangum
+sentry_sdk
+pytest
+openpyxl
+xlsxwriter
+pandas

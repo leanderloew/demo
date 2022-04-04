@@ -1,0 +1,20 @@
+org: demo
+app: demo
+service: demo
+variablesResolutionMode: 20210326
+
+frameworkVersion: "3.1.1"
+useDotenv: true
+provider:
+  name: aws
+  stage: ${opt:stage}
+  endpointType: regional
+  region: eu-central-1
+  lambdaHashingVersion: 20201221
+  apiName: ${self:service}-${opt:stage}
+  apiGateway:
+    description: REST API ${self:service}
+    metrics: true
+  logRetentionInDays: 3
+
+functions: ${file(functions.yml):functions}
